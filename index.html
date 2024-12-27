@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy24 Consultoria Tic.</title>
+  <meta name="description" content="Your Description">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos para que el video cubra toda la pantalla */
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Resto del estilo de la página */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Videos de fondo -->
+  <video class="video-background" autoplay muted loop id="video1">
+    <source src="video1.mp4" type="video/mp4">
+    Tu navegador no soporta el formato de video.
+  </video>
+  
+  <video class="video-background" autoplay muted loop id="video2" style="display:none;">
+    <source src="video2.mp4" type="video/mp4">
+    Tu navegador no soporta el formato de video.
+  </video>
+
+  <video class="video-background" autoplay muted loop id="video3" style="display:none;">
+    <source src="video3.mp4" type="video/mp4">
+    Tu navegador no soporta el formato de video.
+  </video>
+
+  <header>
+    <!-- Logo, Título y Descripción -->
+    <div class="header_img flex_column_center">
+      <img src="img/logo.jpg" alt="Logo" />
+    </div>
+    <div class="header_text flex_column_center">
+      <h1 class="header_h_item">Proxy24</h1>
+      <h2 class="header_h_item">Consultoría especializada en Tecnologías de la Información</h2>
+    </div>
+
+    <!-- Redirección a redes sociales -->
+    <div class="header_svg_list flex_row_center">
+      <!-- Aquí van tus íconos sociales -->
+    </div>
+  </header>
+
+  <main>
+    <section id="main_section_container_1" class="flex_column_center">
+      <div class="main_text_item">
+        <p>The project, where you can easily change texts, icons, colours, boxes, and images, is live!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer_div_item flex_row_center">
+      <a class="footer_a_item" href="#link">proxy24.tec@gmail.com</a>&nbsp;| Contacteme 
+    </div>
+  </footer>
+
+  <script>
+    // Cambiar entre videos automáticamente
+    const videos = document.querySelectorAll('.video-background');
+    let currentVideoIndex = 0;
+
+    function playNextVideo() {
+      // Ocultar el video actual
+      videos[currentVideoIndex].style.display = 'none';
+      currentVideoIndex = (currentVideoIndex + 1) % videos.length; // Ciclo a través de los videos
+      // Mostrar el siguiente video
+      videos[currentVideoIndex].style.display = 'block';
+    }
+
+    // Al terminar un video, reproducir el siguiente
+    videos.forEach(video => {
+      video.addEventListener('ended', playNextVideo);
+    });
+  </script>
+
+</body>
+</html>
