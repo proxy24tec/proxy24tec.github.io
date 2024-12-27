@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proxy24 Consultoria Tic.</title>
+  <title>Proxy24</title>
   <meta name="description" content="Your Description">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap">
-  <listyle.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     /* Estilos para que el video cubra toda la pantalla */
     .video-background {
@@ -18,10 +19,38 @@
       object-fit: cover;
       z-index: -1;
     }
-    /* Resto del estilo de la página */
+    /* Estilos generales */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
+    }
+    /* Botón de WhatsApp */
+    .whatsapp-button {
+      background-color: #25d366;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 30px;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .whatsapp-button img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebd5a;
+    }
+    .header_text {
+      text-align: center;
     }
   </style>
 </head>
@@ -50,12 +79,14 @@
     </div>
     <div class="header_text flex_column_center">
       <h1 class="header_h_item">Proxy24</h1>
-      <h2 class="header_h_item">Consultoría especializada en Tecnologías de la Información</h2>
-    </div>
+      <h2 class="header_h_item">Consultoria Tic´s.</h2>
 
-    <!-- Redirección a redes sociales -->
-    <div class="header_svg_list flex_row_center">
-      <!-- Aquí van tus íconos sociales -->
+      <!-- Botón de WhatsApp debajo de la descripción -->
+      <a href="https://wa.me/1234567890?text=¡Hola! Me gustaría más información." 
+         class="whatsapp-button" target="_blank">
+        <img src="img/image.png" alt="">
+        Informacion
+      </a>
     </div>
   </header>
 
@@ -69,7 +100,7 @@
 
   <footer>
     <div class="footer_div_item flex_row_center">
-      <a class="footer_a_item" href="#link">proxy24.tec@gmail.com</a>&nbsp;| Contacteme 
+      <a class="footer_a_item" href="#link">Your Name</a>&nbsp;| Copyright Text
     </div>
   </footer>
 
